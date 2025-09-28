@@ -1,0 +1,51 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'Maven 3.8.1'   // Match the Maven version installed in Jenkins
+        jdk 'JDK 1.8'         // Java 8 setup
+    }
+
+    environment {
+        REPORT_DIR = 'test-output'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/Vishnukumar-IT/Fleets-Web-Test.git'
+            }
+        }
+
+        stage('Build & Test') {
+            steps {
+                sh 'mvn clean test'
+            }
+        }
+
+        stage('Publish HTML Report') {
+            steps {
+                publishHTML(target: [
+                    reportDir: "${REPORT_DIR}",
+                    reportFiles: 'ExtentReport.html',
+                    reportName: 'Extent Report'
+                ])
+            }
+        }
+
+        stage('Archive Screenshots') {
+            steps {
+                archiveArtifacts artifacts: "${REPORT_DIR}/screenshots/*.png", fingerprint: true
+            }
+        }
+    }
+
+    post {
+        success {
+            echo '✅ Build passed!'
+        }
+        failure {
+            echo '❌ Build failed. Check reports and logs.'
+        }
+    }
+}
