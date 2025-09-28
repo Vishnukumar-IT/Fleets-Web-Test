@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-26T13:45:25 IST" name="Default suite" finished-at="2025-09-26T13:45:45 IST" duration-ms="20044">
+    <groups>
+    </groups>
+    <test started-at="2025-09-26T13:45:25 IST" name="Default test" finished-at="2025-09-26T13:45:45 IST" duration-ms="20044">
+      <class name="tests.AddDriverTest">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:tests.AddDriverTest@48e1f6c7]" started-at="2025-09-26T13:45:25 IST" name="setupReport" finished-at="2025-09-26T13:45:25 IST" duration-ms="618" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReport -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:tests.AddDriverTest@48e1f6c7]" started-at="2025-09-26T13:45:25 IST" name="setup" finished-at="2025-09-26T13:45:34 IST" duration-ms="8550" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.AddDriverTest.testAddDriver() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testAddDriver()[pri:0, instance:tests.AddDriverTest@48e1f6c7]" started-at="2025-09-26T13:45:34 IST" name="testAddDriver" finished-at="2025-09-26T13:45:44 IST" duration-ms="10548" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddDriver -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.AddDriverTest@48e1f6c7]" started-at="2025-09-26T13:45:44 IST" name="tearDown" finished-at="2025-09-26T13:45:45 IST" duration-ms="867" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAddDriver status=SUCCESS method=AddDriverTest.testAddDriver()[pri:0, instance:tests.AddDriverTest@48e1f6c7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:tests.AddDriverTest@48e1f6c7]" started-at="2025-09-26T13:45:45 IST" name="flushReport" finished-at="2025-09-26T13:45:47 IST" duration-ms="1786" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReport -->
+      </class> <!-- tests.AddDriverTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
